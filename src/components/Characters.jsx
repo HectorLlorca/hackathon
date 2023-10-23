@@ -27,9 +27,9 @@ export default function Characters({
   }, [page, isLoading, setCharacters, setIsLoading, setPage]);
 
   useEffect(() => {
+    if (isLoading) return;
+    if (search) return;
     const handleScroll = () => {
-      if (search) return;
-      if (isLoading) return;
       const { scrollTop, clientHeight, scrollHeight } =
         document.documentElement;
       if (scrollTop + clientHeight >= scrollHeight - 20) {
