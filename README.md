@@ -1,8 +1,11 @@
 # JUMP2DIGITAL Rick and Morty
 
 Rick and morty per la hackaton de JUMP2DIGITAL.
-
 [Live site](https://jump2rickandmorty-hectorllorca.vercel.app/)
+
+## Tech Stack
+
+-Next.js, TailwindCSS, DaisyUI
 
 ## Installation
 
@@ -22,4 +25,4 @@ Rick and morty per la hackaton de JUMP2DIGITAL.
 npm start
 ```
 
--Open the project in your browser at http://localhost:3000.
+-Open the project in your browser at [http://localhost:3000](http://localhost:3000).
