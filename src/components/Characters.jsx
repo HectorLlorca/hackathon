@@ -29,6 +29,7 @@ export default function Characters({
   useEffect(() => {
     const handleScroll = () => {
       if (search) return;
+      if (isLoading) return;
       const { scrollTop, clientHeight, scrollHeight } =
         document.documentElement;
       if (scrollTop + clientHeight >= scrollHeight - 20) {
@@ -42,7 +43,7 @@ export default function Characters({
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("touchmove", handleScroll);
     };
-  }, [fetchData, search]);
+  }, [fetchData, search, isLoading]);
   return (
     <div className="flex flex-col gap-3 ">
       {!characters?.results[0] && (
@@ -59,6 +60,7 @@ export default function Characters({
           <span className="w-[40px] border border-primary "></span>
         </div>
       )}
+      <div className="h-[100px]"></div>
     </div>
   );
 }
