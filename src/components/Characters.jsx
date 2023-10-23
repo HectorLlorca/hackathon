@@ -32,7 +32,7 @@ export default function Characters({
       if (search) return;
       const { scrollTop, clientHeight, scrollHeight } =
         document.documentElement;
-      if (scrollTop + clientHeight >= scrollHeight - 50) {
+      if (scrollTop + clientHeight >= scrollHeight - 90) {
         fetchData();
       }
     };
