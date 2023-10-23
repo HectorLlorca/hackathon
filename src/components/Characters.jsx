@@ -27,9 +27,9 @@ export default function Characters({
   }, [page, isLoading, setCharacters, setIsLoading, setPage]);
 
   useEffect(() => {
-    if (isLoading) return;
-    if (search) return;
     const handleScroll = () => {
+      if (isLoading) return;
+      if (search) return;
       const { scrollTop, clientHeight, scrollHeight } =
         document.documentElement;
       if (scrollTop + clientHeight >= scrollHeight - 20) {
@@ -41,7 +41,6 @@ export default function Characters({
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("touchmove", handleScroll);
     };
   }, [fetchData, search, isLoading]);
   return (

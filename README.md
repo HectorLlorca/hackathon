@@ -2,7 +2,7 @@
 
 Rick and morty per la hackaton de JUMP2DIGITAL.
 
-[Live site](https://hackathon-hectorllorca.vercel.app/)
+[Live site](https://jump2rickandmorty-hectorllorca.vercel.app/)
 
 ## Installation
 
