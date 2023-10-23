@@ -5,8 +5,24 @@ import ThemeSwitcher from "@/components/ThemeSwitcher";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+const API_BASE_URL = "https://rickandmortyapi.com/api";
+
 export default function Home() {
   const [themeLoading, setThemeLoading] = useState(true);
+  const [characters, setCharacters] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [page, setPage] = useState(1);
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    const fetchCharacters = async () => {
+      const response = await fetch(`${API_BASE_URL}/character`);
+      const data = await response.json();
+      setCharacters({ ...data });
+      setIsLoading(false);
+    };
+    fetchCharacters();
+  }, []);
   useEffect(() => {
     setTimeout(() => {
       setThemeLoading(false);
@@ -24,10 +40,27 @@ export default function Home() {
             <div className="flex justify-center">
               <Image src="/ricktitle.png" width={1300} height={1220} alt="" />
             </div>
-            <Search />
+            <Search setSearch={setSearch} />
           </header>
           <main className="p-1 sm:p-2 ">
-            <Characters />
+            {search && (
+              <Characters
+                search={search}
+                characters={search}
+                setCharacters={setCharacters}
+              />
+            )}
+            {!search && (
+              <Characters
+                characters={characters}
+                setCharacters={setCharacters}
+                isLoading={isLoading}
+                setIsLoading={setIsLoading}
+                page={page}
+                setPage={setPage}
+                search={search}
+              />
+            )}
           </main>
         </div>
       )}
