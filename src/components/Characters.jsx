@@ -32,15 +32,17 @@ export default function Characters({
       if (search) return;
       const { scrollTop, clientHeight, scrollHeight } =
         document.documentElement;
-      if (scrollTop + clientHeight >= scrollHeight - 20) {
+      if (scrollTop + clientHeight >= scrollHeight - 10) {
         fetchData();
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("touchmove", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("touchmove", handleScroll);
     };
   }, [fetchData, search, isLoading]);
   return (
