@@ -1,4 +1,4 @@
-# Project Title
+# JUMP2DIGITAL Rick and Morty
 
 Rick and morty per la hackaton de JUMP2DIGITAL.
 
