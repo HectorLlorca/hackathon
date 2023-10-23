@@ -13,6 +13,10 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "rick-title": "url('/herorick.png')",
       },
+      gridTemplateColumns: {
+        "auto-fill-100": "repeat(auto-fill, minmax(150px, 180px))",
+        "auto-fit-100": "repeat(auto-fit, minmax(100px, 1fr))",
+      },
     },
   },
   plugins: [require("daisyui")],

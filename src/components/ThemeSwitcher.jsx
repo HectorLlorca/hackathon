@@ -22,7 +22,7 @@ export default function ThemeSwitcher() {
 
         {/* sun icon */}
         <svg
-          className="swap-on fill-current w-12 h-1w-12 "
+          className="swap-on fill-current w-8 sm:w-10  "
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -31,7 +31,7 @@ export default function ThemeSwitcher() {
 
         {/* moon icon */}
         <svg
-          className="swap-off fill-current w-12 h-1w-12"
+          className="swap-off fill-current w-8 sm:w-10 "
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >

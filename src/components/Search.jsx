@@ -7,7 +7,7 @@ export default function Search() {
   };
 
   return (
-    <div className="form-control">
+    <div className="form-control z-50">
       <input
         type="text"
         onChange={onChange}

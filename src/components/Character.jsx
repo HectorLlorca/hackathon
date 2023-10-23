@@ -11,20 +11,20 @@ const imgStyle = {
 };
 export default function Character({ character }) {
   return (
-    <div className="flex flex-col mx-auto max-w-[250px] gap-1">
+    <div className="flex flex-col mx-auto  gap-1">
       {character?.name && (
         <>
           <Image
             style={imgStyle}
             src={character?.image}
-            width={250}
-            height={250}
+            width={200}
+            height={200}
             placeholder="empty"
             alt={character?.name}
           />
-          <h4 className={`text-[#43b4cb] mt-1 ${myFont.className}`}>
+          <h5 className={`text-[#43b4cb] mt-1 ${myFont.className}`}>
             {character?.name}
-          </h4>
+          </h5>
           <div>
             <p>
               <b>Specie</b>: {character?.species}

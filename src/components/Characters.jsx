@@ -46,8 +46,8 @@ export default function Characters() {
     };
   }, [fetchData]);
   return (
-    <div className="flex flex-col gap-3">
-      <div className="grid lg:grid-cols-4 md:grid-cols-3 xl:grid-cols-5 sm:grid-cols-2 gap-10 justify-center">
+    <div className="flex flex-col gap-3 ">
+      <div className="grid grid-cols-auto-fill-100 gap-3 justify-center  ">
         {characters?.results.map((character) => (
           <Character key={character.id} character={character} />
         ))}
