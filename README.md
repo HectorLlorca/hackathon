@@ -1,6 +1,8 @@
 # Project Title
 
-Rick and morty per la hackaton de JUMP2DIGITAL
+Rick and morty per la hackaton de JUMP2DIGITAL.
+
+[Live site](https://hackathon-hectorllorca.vercel.app/)
 
 ## Installation
 
